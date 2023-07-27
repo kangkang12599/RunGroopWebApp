@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@using RunGroopWebApp.Data.Enum;
+@using RunGroopWebApp.ViewModels;
+@model Club;
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h3 class="mb-3">Are you sure to delete this club?</h3>
+<div class="form-group mb-3">
+    <label asp-for="Title" class="mb-2">Title</label>
+    <input asp-for="Title" class="form-control" placeholder="Title" readonly>
+    <span asp-validation-for="Title" class="text-danger"></span>
+</div>
+<div class="form-group mb-3">
+    <label asp-for="Description" class="mb-2">Description</label>
+    <input asp-for="Description" class="form-control" placeholder="Description" readonly>
+    <span asp-validation-for="Description" class="text-danger"></span>
+</div>
+<div class="form-group mb-3">
+    <label asp-for="ClubCategory" class="mb-2">Category</label>
+    <input asp-for="ClubCategory" class="form-control" placeholder="Club Category" readonly>
+    <span asp-validation-for="ClubCategory" class="text-danger"></span>
+</div>
+<div class="form-group mb-3">
+    <label asp-for="Address.Street" class="mb-2">Street</label>
+    <input asp-for="Address.Street" class="form-control" placeholder="Street" readonly>
+    <span asp-validation-for="Address.Street" class="text-danger"></span>
+</div>
+<div class="form-group mb-3">
+    <label asp-for="Address.City" class="mb-2">City</label>
+    <input asp-for="Address.City" class="form-control" placeholder="City" readonly>
+    <span asp-validation-for="Address.City" class="text-danger"></span>
+</div>
+<div class="form-group mb-3">
+    <label asp-for="Address.State" class="mb-2">State</label>
+    <input asp-for="Address.State" class="form-control" placeholder="State" readonly>
+    <span asp-validation-for="Address.State" class="text-danger"></span>
+</div>
+<img src="@Model.ImageUrl" class="img-fluid d-block mb-3 w-25" alt="Responsive image">
+<form action="Delete" method="post" enctype="multipart/form-data">
+    <input asp-for="Id" class="form-control" placeholder="Title" hidden>
+    <button type="submit" class="btn btn-primary">Confirm</button>
+</form>
